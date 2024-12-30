@@ -8,13 +8,9 @@ An in-depth paragraph about your project and overview of use.
 
 ## Getting Started
 
-### Dependencies
+### Dependencies and installed software
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
-
-### Installing
-
+* Windows 10
 * GAMS Studio 1.15.5
 * GAMS Distribution 44.4.0 (GAMS Release: 44.4.0 06604687 WEX-WEI x86 64bit/MS Windows) 
 * CPLEX solver
@@ -23,8 +19,8 @@ An in-depth paragraph about your project and overview of use.
 
 * How to run the program
 * Step-by-step bullets
-```
 
+```
 
 *--------------------------------------------------------------
 
@@ -597,7 +593,6 @@ embeddedCode Connect:
 endEmbeddedCode
 *--------------------------------------------------------------
 
-
 ```
 
 ## Help
@@ -618,7 +613,3 @@ command to run if program contains helper info
     * See [commit change]() or See [release history]()
 * 0.1
     * Initial Release
-
-## License
-
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
