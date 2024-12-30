@@ -15,7 +15,7 @@ Total Cost_{sys} = min(TC_{grid}+ TC_{solar}+ TC_{sto}
 **1.a) Total cost of electricity drawn from the grid**
 
 ```math
-TC_{grid} = \displaystyle\sum_{y=1}^{Y} C_i . N_load,grid 
+TC_{grid} = \displaystyle\sum_{y=1}^{Y} (C_{FC,grid,y} . N_{load,grid,y}) 
 ```
 
 ## Getting Started
