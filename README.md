@@ -9,10 +9,14 @@ An in-depth paragraph about your project and overview of use.
 **2.1.	Optimization model**
 
 ```math
-(Total Cost_{sys} = min(TC_{grid}+ TC_{solar}+ TC_{sto})
+Total Cost_{sys} = min(TC_{grid}+ TC_{solar}+ TC_{sto}
 ```
 
+*Total cost of electricity drawn from the grid (〖TC〗_grid)*
 
+```math
+\displaystyle\sum_{i=1}^{10} t_i
+```
 
 ## Getting Started
 
