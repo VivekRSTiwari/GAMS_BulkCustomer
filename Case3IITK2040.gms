@@ -3,7 +3,7 @@
 *--------------------------------------------------------------
 
 Set
-   t 'hours'         / t1*t8760 /
+   t 'hours'         / t1*t219000 /
    c 'load or CFS' / load,TNCUFW,TNCUFS,MHCUFW,MHCUFS,GJCUFW,GJCUFS,KACUFW,KACUFS,RJCUFW,RJCUFS,APCUFW,APCUFS,UPCUFS /
 ;
 *--------------------------------------------------------------
@@ -14,8 +14,8 @@ Set
 Parameter data(t,c); 
 
 *Read the indata file for parameter data (read XX:YY)
-$call GDXXRW indataCase3IITK2040.xlsx trace=3 par=data rng=Sheet1!a1:o8761 rdim=1 cdim=1
-$GDXIN indataCase3IITK2040.gdx
+$call GDXXRW indataCase3IITK202549.xlsx trace=3 par=data rng=Sheet1!a1:o219001 rdim=1 cdim=1
+$GDXIN indataCase3IITK202549.gdx
 $LOAD  data
 $GDXIN
 Display data;
@@ -102,13 +102,20 @@ Variable
 
 *--------------------------------------------------------------
 Scalar
-    Msim       'Months of simulation (month)'                    / 12 /
+    Msim       'Months of simulation (month)'                    / 300 /
     
     Cfcgrid    'Cost of Grid santioned load (Rs/MW/Month)'       / 682083 /
     Cvcgrid    'Variable Cost of grid power delivered (Rs/MWh)'  / 14210 /
     Ngridmax   'Maximum grid capacity (MW)'                      / 1000 /
        
-    Cs         'cost of solar energy (Rs/MWh)'                   / 1840 /
+    CsTN       'cost of solar energy (Rs/MWh)'                   / 3840.44 /
+    CsMH       'cost of solar energy (Rs/MWh)'                   / 3893.09 /
+    CsGJ       'cost of solar energy (Rs/MWh)'                   / 3906.69 /
+    CsKA       'cost of solar energy (Rs/MWh)'                   / 3880.17 /    
+    CsRJ       'cost of solar energy (Rs/MWh)'                   / 3897.93 /
+    CsAP       'cost of solar energy (Rs/MWh)'                   / 3876.08 /
+    CsUP       'cost of solar energy (Rs/MWh)'                   / 3793.77 /
+
     Csc        'cost of curtainment solar energy (Rs/MWh)'       / 1500 /
     Ns_AP_max  'Maximum Solar energy capacity (MW)'              / 1000 /
     Ns_GJ_max  'Maximum Solar energy capacity (MW)'              / 1000 /
@@ -118,7 +125,13 @@ Scalar
     Ns_RJ_max  'Maximum Solar energy capacity (MW)'              / 1000 /
     Ns_UP_max  'Maximum Solar energy capacity (MW)'              / 1000 /
 
-    Cw         'cost of wind energy (Rs/MWh)'                    / 2595 /
+    CwTN       'cost of solar energy (Rs/MWh)'                   / 5544.85 /
+    CwMH       'cost of solar energy (Rs/MWh)'                   / 5626.72 /
+    CwGJ       'cost of solar energy (Rs/MWh)'                   / 5647.88 /
+    CwKA       'cost of solar energy (Rs/MWh)'                   / 5606.64 /    
+    CwRJ       'cost of solar energy (Rs/MWh)'                   / 5634.25 /
+    CwAP       'cost of solar energy (Rs/MWh)'                   / 5600.28 /
+    
     Cwc        'cost of curtainment wind energy (Rs/MWh)'        / 1500 /    
     Nw_AP_max  'Maximum Wind energy capacity (MW)'               / 1000 /
     Nw_GJ_max  'Maximum Wind energy capacity (MW)'               / 1000 /
@@ -130,7 +143,7 @@ Scalar
     ISOCP_ESS  'State of chage of ESS at t = 0 (MWh)'            / 0.5 /
     eta_c_ESS  'Charging efficiency of ESS (-)'                  / 0.95 /
     eta_d_ESS  'Charging efficiency of ESS (-)'                  / 0.9 /
-    Cfcsto_ESS 'cost of ESS Storage (Rs/MWh)'                    / 233168 /
+    Cfcsto_ESS 'cost of ESS Storage (Rs/MWh)'                    / 248105 /
     PBmax_ESS  'Maximum power delivered by ESS (MW)'             / 30000 /
     EBmax_ESS  'Maximum ESS capacity (MWh)'                      / 30000 /
        
@@ -313,20 +326,20 @@ Equation
 *1-Objective equation
 *--------------------------------------------------------------
 SystemCost..   cost =e=          (Ngrid*Cfcgrid*Msim)          + sum((t),Pgrid(t)*Cvcgrid)
-                           + sum((t),(Ps_TN(t)-Psc_TN(t))*Cs)  + sum((t),(Psc_TN(t))*Csc)
-                           + sum((t),(Ps_MH(t)-Psc_MH(t))*Cs)  + sum((t),(Psc_MH(t))*Csc)
-                           + sum((t),(Ps_GJ(t)-Psc_GJ(t))*Cs)  + sum((t),(Psc_GJ(t))*Csc)
-                           + sum((t),(Ps_KA(t)-Psc_KA(t))*Cs)  + sum((t),(Psc_KA(t))*Csc)
-                           + sum((t),(Ps_RJ(t)-Psc_RJ(t))*Cs)  + sum((t),(Psc_RJ(t))*Csc)
-                           + sum((t),(Ps_AP(t)-Psc_AP(t))*Cs)  + sum((t),(Psc_AP(t))*Csc)
-                           + sum((t),(Ps_UP(t)-Psc_UP(t))*Cs)  + sum((t),(Psc_UP(t))*Csc)
+                           + sum((t),(Ps_TN(t)-Psc_TN(t))*CsTN)  + sum((t),(Psc_TN(t))*Csc)
+                           + sum((t),(Ps_MH(t)-Psc_MH(t))*CsMH)  + sum((t),(Psc_MH(t))*Csc)
+                           + sum((t),(Ps_GJ(t)-Psc_GJ(t))*CsGJ)  + sum((t),(Psc_GJ(t))*Csc)
+                           + sum((t),(Ps_KA(t)-Psc_KA(t))*CsKA)  + sum((t),(Psc_KA(t))*Csc)
+                           + sum((t),(Ps_RJ(t)-Psc_RJ(t))*CsRJ)  + sum((t),(Psc_RJ(t))*Csc)
+                           + sum((t),(Ps_AP(t)-Psc_AP(t))*CsAP)  + sum((t),(Psc_AP(t))*Csc)
+                           + sum((t),(Ps_UP(t)-Psc_UP(t))*CsUP)  + sum((t),(Psc_UP(t))*Csc)
                           
-                           + sum((t),(Pw_TN(t)-Pwc_TN(t))*Cw)  + sum((t),(Pwc_TN(t))*Cwc)
-                           + sum((t),(Pw_MH(t)-Pwc_MH(t))*Cw)  + sum((t),(Pwc_MH(t))*Cwc)
-                           + sum((t),(Pw_GJ(t)-Pwc_GJ(t))*Cw)  + sum((t),(Pwc_GJ(t))*Cwc)
-                           + sum((t),(Pw_KA(t)-Pwc_KA(t))*Cw)  + sum((t),(Pwc_KA(t))*Cwc)
-                           + sum((t),(Pw_RJ(t)-Pwc_RJ(t))*Cw)  + sum((t),(Pwc_RJ(t))*Cwc)
-                           + sum((t),(Pw_AP(t)-Pwc_AP(t))*Cw)  + sum((t),(Pwc_AP(t))*Cwc)
+                           + sum((t),(Pw_TN(t)-Pwc_TN(t))*CwTN)  + sum((t),(Pwc_TN(t))*Cwc)
+                           + sum((t),(Pw_MH(t)-Pwc_MH(t))*CwMH)  + sum((t),(Pwc_MH(t))*Cwc)
+                           + sum((t),(Pw_GJ(t)-Pwc_GJ(t))*CwGJ)  + sum((t),(Pwc_GJ(t))*Cwc)
+                           + sum((t),(Pw_KA(t)-Pwc_KA(t))*CwKA)  + sum((t),(Pwc_KA(t))*Cwc)
+                           + sum((t),(Pw_RJ(t)-Pwc_RJ(t))*CwRJ)  + sum((t),(Pwc_RJ(t))*Cwc)
+                           + sum((t),(Pw_AP(t)-Pwc_AP(t))*CwAP)  + sum((t),(Pwc_AP(t))*Cwc)
                            + (EBc_ESS*Cfcsto_ESS*Msim)
                            + (EBc_PHS*Cfcsto_PHS*Msim);
 *--------------------------------------------------------------
