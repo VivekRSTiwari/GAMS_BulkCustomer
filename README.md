@@ -609,7 +609,7 @@ command to run if program contains helper info
 
 ## Authors
 
-ex. [@DomPizzie]
+ex. [@Dr. Vivek Tiwari]
 
 ## Version History
 
