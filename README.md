@@ -11,6 +11,7 @@ An in-depth paragraph about your project and overview of use.
 ### Dependencies and installed software
 
 * Windows 10
+* Microsoft Excel
 * GAMS Studio 1.15.5
 * GAMS Distribution 44.4.0 (GAMS Release: 44.4.0 06604687 WEX-WEI x86 64bit/MS Windows) 
 * CPLEX solver
