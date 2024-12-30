@@ -6,9 +6,11 @@ Simple overview of use/purpose.
 
 An in-depth paragraph about your project and overview of use.
 
-Optimization model
-The prime objective is to minimize the overall cost of the power system of the campus. This cost encompasses several components, namely the total costs associated with grid, renewable energy sources (solar and wind) and storage systems (see Eq.  2-5). The formulation of the objective function is shown in Eq.  1.
-〖Total Cost〗_sys=min(〖TC〗_grid  + 〖TC〗_solar+ 〖TC〗_sto)	Eq.  1
+**The Cauchy-Schwarz Inequality**
+
+```math
+\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
+```
 
 
 
