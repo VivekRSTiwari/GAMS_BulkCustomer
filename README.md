@@ -609,7 +609,7 @@ command to run if program contains helper info
 
 ## Authors
 
-* [Vivek Tiwari] ([https://github.com/matiassingers/awesome-readme](https://www.linkedin.com/in/vivekrstiwari/))
+* [Vivek Tiwari] ([https://www.linkedin.com/in/vivekrstiwari/])
 
 ## Version History
 
