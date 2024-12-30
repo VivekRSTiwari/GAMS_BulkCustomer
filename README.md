@@ -12,10 +12,10 @@ An in-depth paragraph about your project and overview of use.
 Total Cost_{sys} = min(TC_{grid}+ TC_{solar}+ TC_{sto}
 ```
 
-*Total cost of electricity drawn from the grid (〖TC〗_grid)*
+*Total cost of electricity drawn from the grid*
 
 ```math
-\displaystyle\sum_{y=1}^{Y} C_i . N_load,grid 
+TC_{grid} = \displaystyle\sum_{y=1}^{Y} C_i . N_load,grid 
 ```
 
 ## Getting Started
