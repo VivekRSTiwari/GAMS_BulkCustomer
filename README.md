@@ -17,7 +17,7 @@ An in-depth paragraph about your project and overview of use.
 
 * GAMS Studio 1.15.5
 * GAMS Distribution 44.4.0 (GAMS Release: 44.4.0 06604687 WEX-WEI x86 64bit/MS Windows) 
-* Any modifications needed to be made to files/folders
+* CPLEX solver
 
 ### Executing program
 
