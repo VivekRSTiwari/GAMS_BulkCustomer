@@ -602,7 +602,7 @@ Any advise for common problems or issues.
 command to run if program contains helper info
 ```
 
-## Authors
+## Author
 
 * [Vivek Tiwari](https://www.linkedin.com/in/vivekrstiwari)
 
