@@ -6,13 +6,13 @@ Simple overview of use/purpose.
 
 An in-depth paragraph about your project and overview of use.
 
-**2.1.	Optimization model**
+**1.	Optimization model**
 
 ```math
 Total Cost_{sys} = min(TC_{grid}+ TC_{solar}+ TC_{sto}
 ```
 
-**a) Total cost of electricity drawn from the grid**
+**1.a) Total cost of electricity drawn from the grid**
 
 ```math
 TC_{grid} = \displaystyle\sum_{y=1}^{Y} C_i . N_load,grid 
