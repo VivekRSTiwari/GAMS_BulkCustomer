@@ -6,7 +6,7 @@ Simple overview of use/purpose.
 
 An in-depth paragraph about your project and overview of use.
 
-**The Cauchy-Schwarz Inequality**
+**2.1.	Optimization model**
 
 ```math
 (Total Cost_{sys} = min(TC_{grid}+ TC_{solar}+ TC_{sto})
