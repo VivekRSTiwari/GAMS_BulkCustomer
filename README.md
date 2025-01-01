@@ -70,7 +70,7 @@ P_{solar,t} \leq N_{Solar}
 **2. d) Charging and discharging constraints for storage system at time t**
 
 ```math
-SOC_{t} = SOC_{t-1} + left(P_{stin, t} \times n_{stin} - P_{stin, t} / n_{stin} right)  \times \Delta t 
+SOC_{t} = SOC_{t-1} + \left(P_{stin, t} \times n_{stin} - P_{stin, t} / n_{stin} \right)  \times \Delta t 
 ```
 <br>
 
