@@ -1,3 +1,5 @@
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
 # The optimal capacity expansion planning for bulk Indian consumer
 
 Simple overview of use/purpose.
