@@ -44,7 +44,7 @@ TC_{sto} = (C_{inv,storage} \times N_{storage}) + \left (M_d \times  \displaysty
 **2. a) Balancing constraints of power supply and demand at time t**
 
 ```math
-TC_{sto} = (C_{inv,storage} \times N_{storage}) + \left (M_d \times  \displaystyle\sum_{y=1}^{Y} (C_{o\&m,storage} \times N_{solar}) \right)
+P_{grid,t} = D_{t} - P_{solar,t} + P_{stin,t} - P_{stout,t} 
 ```
 <br>
 
