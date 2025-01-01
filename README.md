@@ -27,6 +27,11 @@ TC_{grid} = \displaystyle\sum_{y=1}^{Y} (C_{FC,grid,y} \times N_{load,grid,y}) +
 TC_{solar} = (C_{inv,solar} \times N_{solar}) + \left (M_d \times  \displaystyle\sum_{y=1}^{Y} (C_{o\&m,solar} \times N_{solar}) \right)
 ```
 
+**1. c) Total cost of electricity drawn from storage**
+
+```math
+TC_{sto} = (C_{inv,storage} \times N_{storage}) + \left (M_d \times  \displaystyle\sum_{y=1}^{Y} (C_{o\&m,storage} \times N_{solar}) \right)
+```
 
 
 ## Getting Started
