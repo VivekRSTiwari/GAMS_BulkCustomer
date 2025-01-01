@@ -24,7 +24,7 @@ TC_{grid} = \displaystyle\sum_{y=1}^{Y} (C_{FC,grid,y} \times N_{load,grid,y}) +
 **1. b) Total cost of electricity drawn from solar energy**
 
 ```math
-TC_{solar} = (C_{inv,solar} \times N_{solar}) + \left (M_d \times  A \right)
+TC_{solar} = (C_{inv,solar} \times N_{solar}) + \left (M_d \times  \displaystyle\sum_{y=1}^{Y} (C_{O&M,solar,t} \times N_{solar}) \right)
 ```
 
 ## Getting Started
