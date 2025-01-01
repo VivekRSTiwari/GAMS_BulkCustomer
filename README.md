@@ -33,6 +33,10 @@ TC_{solar} = (C_{inv,solar} \times N_{solar}) + \left (M_d \times  \displaystyle
 TC_{sto} = (C_{inv,storage} \times N_{storage}) + \left (M_d \times  \displaystyle\sum_{y=1}^{Y} (C_{o\&m,storage} \times N_{solar}) \right)
 ```
 
+**2.	Constraints**
+<be> The object function optimization must adhere to various related constraints, such as maintaining a balance between power supply and demand (Eq.  5), regulating the power outputs of generation units (Eq.  8-11 and Error! Reference source not found.-25), managing the charge and discharge limitations of storage (Eq.  10-17).
+
+
 
 ## Getting Started
 
