@@ -6,6 +6,8 @@ Simple overview of use/purpose.
 
 <br> This study prioritizes both cost-effectiveness and minimizing emissions, with a particular emphasis on expanding solar and storage capacity. As shown in Figure 1 , the Capacity Expansion Planning (CEP) will use forecasted solar energy generation and electrical consumption load as inputs. It will also consider technical and economic parameters associated with solar and storage options, including their flexibility. Additionally, the CEP employs a Mixed-Integer Linear Programming (MILP) model for optimization. The outputs of the CEP will be the total cost and emissions of the system, the installed capacity of solar and storage systems, and the power generation and flexibility of the grid.
 
+
+
 **1.	Optimization model**
 <br> The prime objective is to minimize the overall cost of the power system of the campus. This cost encompasses several components, namely the total costs associated with grid, renewable energy sources (solar and wind) and storage systems (see Eq.  2-5). The formulation of the objective function is shown in Eq.  1.
 
@@ -13,7 +15,7 @@ Simple overview of use/purpose.
 Total Cost_{sys} = min(TC_{grid}+ TC_{solar}+ TC_{sto}  ...eq(1)
 ```
 
-**1.a) Total cost of electricity drawn from the grid**
+**1. a) Total cost of electricity drawn from the grid**
 
 ```math
 TC_{grid} = \displaystyle\sum_{y=1}^{Y} (C_{FC,grid,y} \times N_{load,grid,y}) + \left (M_d \times  \displaystyle\sum_{t=1}^{T} (C_{LC,grid,t} \times P_{grid,t} \times \Delta t) \right) 
