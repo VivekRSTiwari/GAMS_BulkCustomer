@@ -74,7 +74,7 @@ SOC_{t} = SOC_{t-1} + \left(P_{stin, t} \times n_{stin} - P_{stout, t} / n_{stou
 ```
 <br>
 
-where, discharging (η_stout) and charging (η_stin) efficiency is assumed to be 0.9 and 0.95, respectively.  Similarly, initial energy storage level of ESS (〖Stolev〗_(t=0)) is assumed to be 60 MWh. The time step size (Δt) is 1 hour.
+where discharging and charging efficiency are assumed to be 0.9 and 0.95, respectively.  Similarly, the initial energy storage level of ESS is assumed to be 60 MWh. The time step size (Δt) is 1 hour.
 
 ```math
 SOC_{min} \leq SOC_{t} \leq E_{ESS}
