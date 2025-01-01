@@ -48,10 +48,10 @@ P_{grid,t} = D_{t} - P_{solar,t} + P_{stin,t} - P_{stout,t}
 ```
 <be>
 
-**2. b) Constraints of sanctioned power drawn from grid at time t**
+**2. b) Constraints of sanctioned power drawn from the grid at time t**
 
 ```math
-P_{grid,t} \leq D_{t} - P_{solar,t} + P_{stin,t} - P_{stout,t} 
+P_{min grid} \leq P_{grid,t} \leq P_{santioned, grid} 
 ```
 <br>
 
