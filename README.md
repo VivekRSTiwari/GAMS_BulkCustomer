@@ -46,6 +46,13 @@ The object function optimization must adhere to various related constraints, suc
 ```math
 P_{grid,t} = D_{t} - P_{solar,t} + P_{stin,t} - P_{stout,t} 
 ```
+<be>
+
+**2. b) Constraints of sanctioned power drawn from grid at time t**
+
+```math
+P_{grid,t} \leq D_{t} - P_{solar,t} + P_{stin,t} - P_{stout,t} 
+```
 <br>
 
 ## Getting Started
