@@ -81,7 +81,7 @@ SOC_{min} \leq SOC_{t} \leq E_{ESS}
 ```
 <br>
 
-Where the minimum storage level of ESS is assumed to be 20% of the ESS capacity
+Where the minimum storage level $ SOC_{min} $ of ESS is assumed to be 20% of the ESS capacity
 
 ```math
 N_{sto,min} \leq P_{stout,t} \leq N_{sto,max}
