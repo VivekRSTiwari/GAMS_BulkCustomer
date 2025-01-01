@@ -8,7 +8,7 @@ Simple overview of use/purpose.
 
 
 
-**1.	Optimization model**
+### 1.	Optimization model
 <br> The prime objective is to minimize the overall cost of the power system of the campus. This cost encompasses several components, namely the total costs associated with the grid, renewable energy sources (solar and wind), and storage systems (see Eq.  2-5). The formulation of the objective function is shown in Eq. 1.
 
 ```math
