@@ -11,7 +11,7 @@ The prime objective is to minimize the overall cost of the power system of the c
 ```math
 Total Cost_{sys} = min(TC_{grid}+ TC_{solar}+ TC_{sto})  ...eq(1)
 ```
-
+<br>
 **1. a) Total cost of electricity drawn from the grid**
 
 ```math
