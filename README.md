@@ -28,7 +28,7 @@ TC_{solar} = (C_{inv,solar} \times N_{solar}) + \left (M_d \times  A \right)
 ```
 
 ```math
-  \displaystyle\sum_{y=1}^{Y} (C_{O&M,solar,t} \times N_{solar}) \right
+  \displaystyle\sum_{y=1}^{Y} (C_{O&M,solar,t} 
 ```
 
 ## Getting Started
