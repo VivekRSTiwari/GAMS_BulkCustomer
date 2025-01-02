@@ -77,26 +77,26 @@ P_{solar,t} \leq N_{Solar}     ...eq(7b)
 **2. d) Charging and discharging constraints for storage system at time t**
 
 ```math
-SOC_{t} = SOC_{t-1} + \left(P_{stin, t} \times n_{stin} - P_{stout, t} / n_{stout} \right)  \times \Delta t    ...eq(9)
+SOC_{t} = SOC_{t-1} + \left(P_{stin, t} \times n_{stin} - P_{stout, t} / n_{stout} \right)  \times \Delta t    ...eq(9a)
 ```
 <br>
 
 where discharging and charging efficiency are assumed to be 0.9 and 0.95, respectively.  Similarly, the initial energy storage level of ESS is assumed to be 60 MWh. The time step size (Δt) is 1 hour.
 
 ```math
-SOC_{min} \leq SOC_{t} \leq E_{ESS}    ...eq(10)
+SOC_{min} \leq SOC_{t} \leq E_{ESS}    ...eq(9b)
 ```
 <br>
 
 Where the minimum storage level $SOC_{min}$ of ESS is assumed to be 20% of the ESS capacity
 
 ```math
-N_{sto,min} \leq P_{stout,t} \leq N_{sto,max}    ...eq(11)
+N_{sto,min} \leq P_{stout,t} \leq N_{sto,max}    ...eq(9c)
 ```
 <br>
 
 ```math
-N_{sto,min} \leq P_{stin,t} \leq N_{sto,max}     ...eq(12)
+N_{sto,min} \leq P_{stin,t} \leq N_{sto,max}     ...eq(9d)
 ```
 <br>
 
