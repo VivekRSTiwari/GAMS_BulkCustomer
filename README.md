@@ -20,21 +20,21 @@ Total Cost_{sys} = min(TC_{grid}+ TC_{solar}+ TC_{sto})  ...eq(1)
 **1. a) Total cost of electricity drawn from the grid**
 
 ```math
-TC_{grid} = \displaystyle\sum_{y=1}^{Y} (C_{FC,grid,y} \times N_{load,grid,y}) + \left (M_d \times  \displaystyle\sum_{t=1}^{T} (C_{LC,grid,t} \times P_{grid,t} \times \Delta t) \right) 
+TC_{grid} = \displaystyle\sum_{y=1}^{Y} (C_{FC,grid,y} \times N_{load,grid,y}) + \left (M_d \times  \displaystyle\sum_{t=1}^{T} (C_{LC,grid,t} \times P_{grid,t} \times \Delta t) \right)   ...eq(2)
 ```
 <br>
 
 **1. b) Total cost of electricity drawn from solar energy**
 
 ```math
-TC_{solar} = (C_{inv,solar} \times N_{solar}) + \left (M_d \times  \displaystyle\sum_{y=1}^{Y} (C_{o\&m,solar} \times N_{solar}) \right)
+TC_{solar} = (C_{inv,solar} \times N_{solar}) + \left (M_d \times  \displaystyle\sum_{y=1}^{Y} (C_{o\&m,solar} \times N_{solar}) \right)   ...eq(3)
 ```
 <br>
 
 **1. c) Total cost of electricity drawn from storage**
 
 ```math
-TC_{sto} = (C_{inv,storage} \times N_{storage}) + \left (M_d \times  \displaystyle\sum_{y=1}^{Y} (C_{o\&m,storage} \times N_{solar}) \right)
+TC_{sto} = (C_{inv,storage} \times N_{storage}) + \left (M_d \times  \displaystyle\sum_{y=1}^{Y} (C_{o\&m,storage} \times N_{solar}) \right)   ...eq(4)
 ```
 <br>
 
