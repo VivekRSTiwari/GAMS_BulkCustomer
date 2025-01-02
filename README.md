@@ -31,15 +31,17 @@ TC_{sto} = (C_{inv,solar} \times N_{solar}) + \left (M_d \times  \displaystyle\s
 ```
 <br>
 
-```math
-TC_{sto} = (C_{inv,solar} \times N_{solar}) + \left (M_d \times  \displaystyle\sum_{y=1}^{Y} (C_{o\&m,solar} \times N_{solar}) \right)   ...eq(3)
-```
-<br>
+
 
 **1. c) Total cost of electricity drawn from storage**
 
 ```math
 TC_{sto} = (C_{inv,storage} \times N_{storage}) + \left (M_d \times  \displaystyle\sum_{y=1}^{Y} (C_{o\&m,storage} \times N_{solar}) \right)   ...eq(4)
+```
+<br>
+
+```math
+TC_{sto} =  \displaystyle\sum_{y=1}^{Y} \left (M_d \times  \displaystyle\sum_{t=1}^{T} (C_{o\&m,solar} \times N_{solar}) \right)   ...eq(5)
 ```
 <br>
 
