@@ -10,7 +10,7 @@ This study prioritizes both cost-effectiveness and minimizing emissions, with a 
 </p>
 
 ### 1.	Optimization model
-The prime objective is to minimize the overall cost of the power system of the campus. This cost encompasses several components, namely the total costs associated with the grid, renewable energy sources (solar and wind), and storage systems (see Eq.  2-5). The formulation of the objective function is shown in Eq. 1.
+The prime objective is to minimize the overall cost of the power system of the campus. This cost encompasses several components, namely the total costs associated with the grid, renewable energy sources (solar and wind), and storage systems (see Eq.  2-4). The formulation of the objective function is shown in Eq. 1.
 
 ```math
 Total Cost_{sys} = min(TC_{grid}+ TC_{solar}+ TC_{sto})  ...eq(1)
@@ -36,12 +36,12 @@ TC_{sto} = (C_{inv,solar} \times N_{solar}) + \left (M_d \times  \displaystyle\s
 **1. c) Total cost of electricity drawn from storage**
 
 ```math
-TC_{sto} = (C_{inv,storage} \times N_{storage}) + \left (M_d \times  \displaystyle\sum_{y=1}^{Y} (C_{o\&m,storage} \times N_{solar}) \right)   ...eq(4)
+TC_{sto} = (C_{inv,storage} \times N_{storage}) + \left (M_d \times  \displaystyle\sum_{y=1}^{Y} (C_{o\&m,storage} \times N_{solar}) \right)   ...eq(4a)
 ```
 <br>
 
 ```math
-TC_{sto} =  \displaystyle\sum_{y=1}^{Y} \left (M_d \times  \displaystyle\sum_{t=1}^{T} (C_{o\&m,solar} \times N_{solar}) \right)   ...eq(5)
+TC_{sto} =  \displaystyle\sum_{y=1}^{Y} \left (M_d \times  \displaystyle\sum_{t=1}^{T} (C_{o\&m,solar} \times N_{solar}) \right)   ...eq(4b)
 ```
 <br>
 
@@ -51,52 +51,52 @@ The object function optimization must adhere to various related constraints, suc
 **2. a) Balancing constraints of power supply and demand at time t**
 
 ```math
-P_{grid,t} = D_{t} - P_{solar,t} + P_{stin,t} - P_{stout,t} 
+P_{grid,t} = D_{t} - P_{solar,t} + P_{stin,t} - P_{stout,t}    ...eq(5)
 ```
 <br>
 
 **2. b) Constraints of sanctioned power drawn from the grid at time t**
 
 ```math
-P_{min grid} \leq P_{grid,t} \leq P_{santioned, grid} 
+P_{min grid} \leq P_{grid,t} \leq P_{santioned, grid}    ...eq(6)
 ```
 <br>
 
 **2. c) Constraints of Solar energy generaion at time t**
 
 ```math
-cr_{solar} \times N_{Solar} = P_{solar, t} 
+cr_{solar} \times N_{Solar} = P_{solar, t}    ...eq(7a)
 ```
 <br>
 
 ```math
-P_{solar,t} \leq N_{Solar} 
+P_{solar,t} \leq N_{Solar}     ...eq(7b)
 ```
 <br>
 
 **2. d) Charging and discharging constraints for storage system at time t**
 
 ```math
-SOC_{t} = SOC_{t-1} + \left(P_{stin, t} \times n_{stin} - P_{stout, t} / n_{stout} \right)  \times \Delta t 
+SOC_{t} = SOC_{t-1} + \left(P_{stin, t} \times n_{stin} - P_{stout, t} / n_{stout} \right)  \times \Delta t    ...eq(9)
 ```
 <br>
 
 where discharging and charging efficiency are assumed to be 0.9 and 0.95, respectively.  Similarly, the initial energy storage level of ESS is assumed to be 60 MWh. The time step size (Δt) is 1 hour.
 
 ```math
-SOC_{min} \leq SOC_{t} \leq E_{ESS}
+SOC_{min} \leq SOC_{t} \leq E_{ESS}    ...eq(10)
 ```
 <br>
 
 Where the minimum storage level $SOC_{min}$ of ESS is assumed to be 20% of the ESS capacity
 
 ```math
-N_{sto,min} \leq P_{stout,t} \leq N_{sto,max}
+N_{sto,min} \leq P_{stout,t} \leq N_{sto,max}    ...eq(11)
 ```
 <br>
 
 ```math
-N_{sto,min} \leq P_{stin,t} \leq N_{sto,max}
+N_{sto,min} \leq P_{stin,t} \leq N_{sto,max}     ...eq(12)
 ```
 <br>
 
